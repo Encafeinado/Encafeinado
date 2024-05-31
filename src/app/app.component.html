@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-coffee">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Encafeinados</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Características</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Precios</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Descubre el mejor café cerca de ti
+        </span>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 position-relative">
+        <div id="map">
+          
+        </div>
+        <button *ngIf="showCancelButton" class="floating-button" (click)="cancelRoute()">
+          <i class="fas fa-times text-white"></i>
+        </button>
+      </div>
+      <div class="col-md-4 sidebar">
+        <h2>Bienvenido a Encafeinados</h2>
+        <p>¡Encuentra los mejores lugares de café en tu área!</p>
+        <img src="https://via.placeholder.com/150" alt="Imagen de café" class="img-fluid">
+        <p>Explora nuestras mejores recomendaciones para los amantes del café.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Botón del librito -->
+
+ 
+  <ng-template #createModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-title">{{ destinationName }}</h4>
+    </div>
+    <div class="modal-body">
+      <img src="https://via.placeholder.com/150" alt="Imagen de café" class="img-fluid" style="width: 100%;">
+      <p style="padding-top: 3%;" *ngIf="destinationName === 'Aroma Café Sabaneta'">Información sobre el café...</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="showRouteGuia()">Guiame</button>
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss('cancel')">Cancelar</button>
+    </div>
+  </ng-template>
+  <!-- (click)="showRoute()" -->

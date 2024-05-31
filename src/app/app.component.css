@@ -1,0 +1,86 @@
+/* app.component.css */
+
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #f7f3e9; /* Light coffee color */
+  color: #4b3832; /* Dark brown color */
+}
+
+.navbar {
+  background-color: #6f4e37; /* Coffee brown color */
+}
+
+.navbar-brand, .nav-link, .navbar-text {
+  color: #f7f3e9 !important; /* Light coffee color */
+}
+
+.nav-link:hover {
+  color: #c8b7a6 !important; /* Light brown color */
+}
+
+.navbar-toggler {
+  border-color: #f7f3e9;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28100, 100, 100, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+#map {
+  height: 70vh;
+  width: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); /* Texture for the map */
+  border-top: 2px solid #6f4e37;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.sidebar {
+  background-color: #f7f3e9;
+  padding: 20px;
+  border-left: 2px solid #6f4e37;
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  color: #6f4e37;
+}
+
+.sidebar p {
+  color: #4b3832;
+}
+
+.sidebar img {
+  margin-bottom: 15px;
+}
+
+.floating-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #6f4e37;
+  color: #f7f3e9;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  background-color: #4b3832;
+}
+
+.floating-button i {
+  font-size: 24px;
+}
